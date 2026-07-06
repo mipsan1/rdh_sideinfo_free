@@ -1,0 +1,898 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[journal,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+%\documentclass[preprints,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+% For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal. Changing "submit" to "accept" before posting will remove line numbers.
+
+%--------------------
+% Class Options:
+%--------------------
+%----------
+% journal
+%----------
+% Choose between the following MDPI journals:
+% accountaudit, acoustics, actuators, addictions, adhesives, adolescents, aerobiology, aerospace, agriculture, agriengineering, agrochemicals, agronomy, ai, aichem, aieng, aimater, aimed, aipa, air, aisens, algorithms, allergies, alloys, amh, analog, analytica, analytics, anatomia, anesthres, animals, antibiotics, antibodies, antioxidants, applbiosci, appliedchem, appliedmath, appliedphys, applmech, applmicrobiol, applnano, applsci, aquacj, architecture, arm, arthropoda, asc, asi, astronautics, astronomy, atmosphere, atoms, audiolres, automation, axioms, bacteria, batteries, bdcc, beverages, biochem, bioengineering, biologics, biology, biomass, biomechanics, biomed, biomedicines, biomedinformatics, biomimetics, biomolecules, biophysica, bioresourbioprod, biosensors, biosphere, biotech, birds, blockchains, bloods, blsf, brainsci, breath, buildings, cancers, carbon, cardio, cardiogenetics, cardiovascmed, catalysts, cells, ceramics, challenges, chemengineering, chemistry, chemosensors, chemproc, children, chips, cimb, civileng, cleantechnol, climate, clinbioenerg, clinpract, clockssleep, cmd, cmtr, coasts, coatings, colloids, colorants, commodities, complexities, complications, compounds, computation, computers, condensedmatter, conservation, constrmater, cosmetics, covid, crops, cryo, cryptography, crystals, csmf, ctn, culture, curroncol, cyber, dairy, data, ddc, dentistry, dermato, dermatopathology, designs, devices, dhi, diabetology, diagnostics, dietetics, digital, disabilities, diseases, diversity, dna, drones, dynamics, earth, ebj, ecm, ecologies, edm, eesp, electricity, electrochem, electronicmat, electronics, encyclopedia, endocrines, energies, eng, engproc, entomology, entropy, environments, environremediat, epidemiologia, epigenomes, esa, est, fermentation, fibers, fintech, fire, fishes, fluids, foods, forecasting, forensicsci, forests, fossstud, foundations, fractalfract, fuels, future, futureinternet, futurepharmacol, futurephys, futuretransp, galaxies, gases, gastroent, gastrointestdisord, gastronomy, gels, genes, geographies, geohazards, geomatics, geometry, geosciences, geotechnics, geriatrics, germs, glacies, grasses, green, greenhealth, gucdd, hardware, hazardousmatters, healthcare, hearts, hemato, hematolrep, hep, heritage, higheredu, highthroughput, horticulturae, hospitals, hydrobiology, hydrogen, hydrology, hydropower, hygiene, idr, iic, ijem, ijerph, ijgi, ijmd, ijms, ijns, ijom, ijpb, ijt, ijtm, ijtpp, ime, immuno, informatics, information, infrastructures, inorganics, insects, instruments, inventions, iot, j, jaestheticmed, jal, jcdd, jcm, jcp, jcrm, jcs, jcto, jdad, jdb, jdream, jemr, jeta, jfb, jfmk, jgbg, jgg, jimaging, jlpea, jmahp, jmmp, jmms, jmp, jmse, jne, jnt, jof, joi, joitmc, joma, jop, joptm, jor, jox, jpbi, jphytomed, jpm, jsan, jtaer, jvd, jzbg, kidneydial, kinasesphosphatases, knowledge, labmed, laboratories, lae, land, life, lights, limnolrev, lipidology, liquids, livers, logics, logistics, lubricants, lymphatics, machines, macromol, magnetism, magnetochemistry, make, marinedrugs, materials, materproc, mathematics, mca, measurements, medicina, medicines, medsci, membranes, merits, metabolites, metals, meteorology, methane, metrics, metrology, micro, microarrays, microbiolres, microelectronics, micromachines, microorganisms, microplastics, microwave, minerals, mining, mmphys, modelling, molbank, molecules, mps, msf, mti, multimedia, muscles, nanoenergyadv, nanomanufacturing, nanomaterials, ncrna, ndt, network, neuroglia, neuroimaging, neurolint, neurosci, nitrogen, notspecified, nursrep, nutraceuticals, nutrients, obesities, occuphealth, oceans, ohbm, onco, optics, oral, organics, organoids, osteology, oxygen, pandemics, parasites, parasitologia, particles, pathogens, pathophysiology, pediatrrep, pets, pharmaceuticals, pharmaceutics, pharmacoepidemiology, pharmacy, philosophies, photochem, photonics, phycology, physchem, physics, physiologia, plants, plasma, platforms, pollutants, polymers, polysaccharides, populations, poultry, powders, precipitation, precisoncol, preprints, proceedings, processes, prosthesis, proteomes, psf, psychiatryint, psychoactives, purification, quantumrep, quaternary, qubs, radiation, rdt, reactions, realestate, receptors, recycling, regeneration, remotesensing, reports, reprodmed, resources, rheumato, rjpm, robotics, rsee, ruminants, safety, sci, scipharm, sclerosis, seeds, sensors, separations, sexes, shi, signals, sinusitis, siuj, skins, smartcities, sna, societies, software, soilsystems, solar, solids, spectroscj, sports, standards, stats, std, stratsediment, stresses, surfaces, surgeries, suschem, sustainability, symmetry, synbio, systems, tae, targets, taxonomy, technologies, telecom, test, textiles, thalassrep, therapeutics, thermo, timespace, tomography, toxics, toxins, tph, transplantology, transportation, traumacare, traumas, tri, tropicalmed, universe, urbansci, uro, vaccines, vehicles, venereology, vetsci, vibration, virtualworlds, viruses, vision, waste, water, welding, wem, wevj, wild, wind, women, world, zoonoticdis
+
+%---------
+% article
+%---------
+% The default type of manuscript is "article", but can be replaced by: 
+% abstract, addendum, article, benchmark, book, bookreview, briefcommunication, briefreport, casereport, changes, clinicopathologicalchallenge, comment, commentary, communication, conceptpaper, conferenceproceedings, correction, conferencereport, creative, datadescriptor, discussion, entry, expressionofconcern, extendedabstract, editorial, essay, erratum, fieldguide, hypothesis, interestingimages, letter, meetingreport, monograph, newbookreceived, obituary, opinion, proceedingpaper, projectreport, reply, retraction, review, perspective, protocol, shortnote, studyprotocol, supfile, systematicreview, technicalnote, viewpoint, guidelines, registeredreport, tutorial,  giantsinurology, urologyaroundtheworld
+% supfile = supplementary materials
+
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g., the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+
+%---------
+% pdftex
+%---------
+% The option pdftex is for use with pdfLaTeX. Remove "pdftex" for (1) compiling with LaTeX & dvi2pdf (if eps figures are used) or for (2) compiling with XeLaTeX.
+
+%=================================================================
+% MDPI internal commands - do not modify
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2026}
+\copyrightyear{2026}
+%\externaleditor{Firstname Lastname} % More than 1 editor, please add `` and '' before the last editor name
+\datereceived{ } 
+\daterevised{ } % Comment out if no revised date
+\dateaccepted{ } 
+\datepublished{ } 
+%\datecorrected{} % For corrected papers: "Corrected: XXX" date in the original paper.
+%\dateretracted{} % For retracted papers: "Retracted: XXX" date in the original paper.
+%\doinum{} % Used for some special journals, like molbank
+%\pdfoutput=1 % Uncommented for upload to arXiv.org
+%\CorrStatement{yes}  % For updates
+%\longauthorlist{yes} % For many authors that exceed the left citation part
+%\IsAssociation{yes} % For association journals
+
+%=================================================================
+% Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx, epstopdf, lastpage, ifthen, float, amsmath, amssymb, lineno, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, colortbl, soul, multirow, microtype, tikz, totcount, changepage, attrib, upgreek, array, tabularx, pbox, ragged2e, tocloft, marginnote, marginfix, enotez, amsthm, natbib, hyperref, cleveref, scrextend, url, geometry, newfloat, caption, draftwatermark, seqsplit
+% cleveref: load \crefname definitions after \begin{document}
+
+%=================================================================
+% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+% Full title of the paper (Capitalized)
+\Title{Side-Information-Free Reversible Image Data Hiding via Sorted Prediction-Error Expansion}
+
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0000-0000-000X} % Add \orcidA{} behind the author's name
+%\newcommand{\orcidauthorB}{0000-0000-0000-000X} % Add \orcidB{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{Cheonshik Kim $^{1,}$*\orcidA{}, Ching-Nung Yang$^{2}$, and Lu Leng $^{3,}$*}
+
+%\longauthorlist{yes}
+
+% MDPI internal command: Authors, for metadata in PDF
+\AuthorNames{Cheonshik Kim, Ching-Nung Yang, Lu Leng}
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+$^{1}$ \quad Department of Computer Engineering, Sejong University, Seoul 05006, Republic of Korea; mipsan@sejong.ac.kr\\
+$^{2}$ \quad Department of Computer Science and Information Engineering, National Dong Hwa University, 
+Hualien 97401, Taiwan; cnyang@gms.ndhu.edu.tw\\
+$^{3}$ \quad School of Software, Nanchang Hangkong University, Nanchang 330063, China; leng@nchu.edu.cn}
+
+% Contact information of the corresponding author
+\corres{Correspondence: mipsan@sejong.ac.kr(C.K); leng@nchu.edu.cn (L.L.)}
+
+% Current address and/or shared authorship
+%\firstnote{Current address: Affiliation.}  
+% Current address should not be the same as any items in the Affiliation section.
+
+%\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes.
+
+%\simplesumm{} % Simple summary
+
+%\conference{} % An extended version of a conference paper
+
+% Abstract (Do not insert blank lines, i.e. \\) 
+\abstract{This paper re-evaluates reversible data hiding (RDH) from the viewpoint of \emph{net} embedding rate rather than headline payload alone. Prediction-error expansion (PEE) remains one of the most effective RDH mechanisms, but schemes that explicitly store a per-pixel embedding-position map or a block-wise predictor-index map can lose more capacity to auxiliary information than they gain in payload. For a payload of $10{,}000$ bits on a $512\times512$ image, a uniformly random binary map marking the used pixels would need about $61{,}271$ auxiliary bits by the binary-entropy value; a real, spatially clustered map compresses below this figure but, as our experiments show, still costs tens of thousands of bits, keeping such map-based designs strongly negative in net capacity. This paper does not claim a new fidelity record over established map-free PEE/PVO methods; instead, it provides explicit net-rate accounting and a side-information-free baseline whose embedded positions are derived at the decoder. The proposed scheme uses an interleaved checkerboard (cross/dot) double layer, a median-of-four opposite-parity predictor, decoder-recoverable complexity sorting, and threshold-controlled shifting PEE. Because prediction and ranking depend only on the unmodified opposite parity within each layer, extraction reproduces the same processing order without any position or predictor map; the remaining side information is a few scalar parameters. Experiments on five standard $512\times512$ images confirm strictly lossless recovery (BER $=0$, MSE $=0$), SSIM above $0.996$, and a net side-information cost of about $80$ bits for the proposed scheme, compared with tens of thousands of bits for designs that store explicit maps. We further report three corrective findings: (i) block-wise multi-predictor selection gives near-zero oracle gain and a net loss once signaling is counted; (ii) decoder-recoverable sorting quality is a major limiting factor, with tested complexity metrics and learned combinations failing to raise the zero-error concentration beyond about $25\%$ on Lena; and (iii) a faithful high-fidelity pairwise-PEE implementation, although fully reversible, underperforms threshold-optimized one-dimensional PEE at the tested operating points.}
+
+% Keywords
+\keyword{Reversible data hiding; Prediction-error expansion; Side-information-free embedding; Checkerboard double-layer prediction; Complexity-based sorting; Net embedding rate; High-fidelity data hiding} 
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{J0101}
+%\MSC{}
+%\JEL{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Diversity
+%\LSID{\url{http://}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Applied Sciences
+%\featuredapplication{Authors are encouraged to provide a concise description of the specific application or a potential application of the work. This section is not mandatory.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Data
+%\dataset{DOI number or link to the deposited data set if the data set is published separately. If the data set shall be published as a supplement to this paper, this field will be filled by the journal editors. In this case, please submit the data set as a supplement.}
+%\datasetlicense{License under which the data set is made available (CC0, CC-BY, CC-BY-SA, CC-BY-NC, etc.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal BioTech, Fishes, Neuroimaging and Toxins
+%\keycontribution{The breakthroughs or highlights of the manuscript. Authors can write one or two sentences to describe the most important part of the paper.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Only for the journal Encyclopedia
+%\encyclopediadef{For entry manuscripts only: please provide a brief overview of the entry title instead of an abstract.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Different journals have different requirements. Please check the specific journal guidelines in the "Instructions for Authors" on the journal's official website.
+%\addhighlights{yes}
+%\renewcommand{\addhighlights}{%
+%
+%\noindent The goal is to increase the discoverability and readability of the article via search engines and other scholars. Highlights should not be a copy of the abstract, but a simple text allowing the reader to quickly and simplified find out what the article is about and what can be cited from it. Each of these parts should be devoted up to 2~bullet points.\vspace{3pt}\\
+%\textbf{What are the main findings?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}\vspace{3pt}
+%\textbf{What are the implications of the main findings?}
+% \begin{itemize}[labelsep=2.5mm,topsep=-3pt]
+% \item First bullet.
+% \item Second bullet.
+% \end{itemize}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setcounter{section}{-1} %% Remove this when starting to work on the template.
+%\section{How to Use this Template}
+%
+%The template details the sections that can be used in a manuscript. Note that the order and names of article sections may differ from the requirements of the journal (e.g., the positioning of the Materials and Methods section). Please check the instructions on the authors' page of the journal to verify the correct order and names. For any questions, please contact the editorial office of the journal or support@mdpi.com. For LaTeX-related questions please contact latex@mdpi.com.%\endnote{This is an endnote.} % To use endnotes, please un-comment \printendnotes below (before References). Only journal Laws uses \footnote.
+%
+%% The order of the section titles is different for some journals. Please refer to the "Instructions for Authors” on the journal homepage.
+%////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+\section{Introduction}
+%Section1
+
+Reversible data hiding (RDH) enables the lossless recovery of both the embedded payload and the original cover image, which is essential in integrity-sensitive applications such as medical imaging, remote sensing, surveillance, and forensics~\cite{Ni2006,Li2015,ZhangSurvey2024}.
+To achieve high capacity with low distortion, many RDH schemes exploit prediction redundancy: prediction errors tend to be concentrated around zero, which makes prediction-error expansion (PEE) a natural and effective mechanism for reversible embedding~\cite{Thodi2007,Li2011,Sachnev2009}.
+Alongside PEE, related paradigms such as pixel-value ordering (PVO) and histogram shifting (HS) have been widely studied to improve the capacity--distortion trade-off~\cite{Gao2019,Rad2016,Soveiri2025,Ni2006,Fallahpour2007,Fu2014,Chang2022}, and multi-dimensional or pairwise mappings further sharpen performance at moderate payloads~\cite{Ou2013,Kim2019,Ou2019,Chang2022,Zhang2022}.
+
+A recurring but under-examined cost in this literature is the \emph{auxiliary information} (side information) that the decoder needs in order to invert the embedding exactly. High-capacity schemes frequently rely on (i) a block-wise predictor-index map when the predictor is chosen adaptively, and (ii) a per-pixel \emph{embedding-position map} that marks which pixels actually carried a bit after threshold and overflow tests. Both are commonly reported as ``small'' or ``compressible'' and are then excluded from the headline capacity. In this paper we argue, and quantify, that the embedding-position map is in fact the dominant obstacle to a fair \emph{net} embedding rate.
+
+The argument is information-theoretic. Marking $n$ used pixels out of $MN$ requires at least $MN\,H_b(n/MN)$ bits, where $H_b$ is the binary entropy. For a $512\times512$ image and a modest payload of $n=10{,}000$ used positions, this equals $61{,}271$ bits for a uniformly random map---more than six times the payload itself. Real embedding maps are spatially clustered and therefore compress below this figure, but, as our experiments confirm, they still cost tens of thousands of bits, so the net capacity of a map-based scheme remains negative at low-to-moderate payloads (Section~\ref{sec:netbpp}). The only way to avoid this cost is to make the used positions \emph{derivable} at the decoder rather than \emph{stored}. This is precisely the design principle we adopt.
+
+We propose a side-information-free RDH scheme built on three synchronization-safe ideas. First, the image is processed as an interleaved checkerboard of two parities (a \emph{cross} set and a \emph{dot} set) in a double layer, so that when one parity is embedded, the other parity is available, unmodified, as prediction context. Second, each pixel is predicted by the median of its four orthogonal opposite-parity neighbors, a simple decoder-recoverable choice whose effect on the prediction-error histogram is marginal relative to the mean rhombus predictor (Section~\ref{sec:predcompare}). Third, pixels within a layer are ranked by an opposite-parity context-complexity measure and expanded, using threshold-controlled shifting PEE, only up to the number of pixels the payload requires. Because the prediction and the ranking depend solely on the \emph{unmodified} opposite parity, the decoder reproduces the identical processing order from the stego image alone---no embedding-position map and no predictor-index map are transmitted. The entire side information is a handful of scalars per layer (threshold, number of processed pixels, and a normally empty overflow list), i.e., a few tens of bits. In relation to prior work, the decoder-recoverable sorting idea originates with Sachnev et al.~\cite{Sachnev2009}; our design differs in its checkerboard double-layer organization and median-of-four predictor, and above all in the net-rate perspective that motivates it. We do not claim to surpass the strongest map-free baselines in fidelity; instead we isolate what actually drives net capacity and report several findings that correct common assumptions.
+
+In the course of this work we also revisit the widely held assumption that block-wise multi-predictor selection is a principled route to higher capacity. Under an oracle (cost-free) selection, we find that choosing among row/column/average or rhombus/directional predictors per block improves PSNR by essentially $0$~dB (e.g., $+0.04$~dB on Lena), and once the mandatory $2$~bits/block signaling is charged, the net effect is a loss of $0.5$--$2.0$~dB. We therefore treat multi-predictor selection as an honest \emph{ablation} rather than a contribution, and reallocate the design budget to eliminating side information.
+
+The contributions of this paper are as follows.
+\begin{itemize}
+\item \textbf{A quantified net-rate argument.} We show, by both the binary-entropy bound and real compressors (bzip2/zlib), that a self-embedded per-pixel embedding-position map drives the net embedding rate negative at low-to-moderate payloads, and we use this as an explicit design criterion. This argument targets designs that store such a map (including the scheme this work revises); it is not a claimed advantage over methods that are already map-free (Section~\ref{sec:netbpp}).
+\item \textbf{A side-information-free scheme.} Building on the decoder-recoverable sorting principle of Sachnev et al.~\cite{Sachnev2009}, we combine a checkerboard double layer, a median-of-four predictor, and complexity sorting into a scheme whose used positions are decoder-derivable, so that the total side information is a few tens of bits---independent of the payload---while recovery is strictly lossless. The methodological novelty is deliberately modest; the emphasis is on eliminating auxiliary information rather than on adding predictor machinery (Section~\ref{sec:proposed}).
+\item \textbf{Honest scientific reckoning.} We provide an ablation showing that block-wise multi-predictor selection has near-zero oracle gain and a net loss; an analysis showing that decoder-recoverable sorting quality is a major limiting factor, but not necessarily the sole explanation of the remaining fidelity gap; and a faithful high-fidelity pairwise-PEE comparison showing that pairwise embedding, although reversible, does not close the gap at the tested operating points (Section~\ref{sec:experiments}).
+\end{itemize}
+
+The rest of this paper is organized as follows. Section~\ref{sec:pre} introduces notation and the PEE background. Section~\ref{sec:proposed} presents the proposed side-information-free scheme, its reversibility proof, and the net-rate analysis. Section~\ref{sec:experiments} reports experiments on five standard images, the multi-predictor ablation, the sorting-quality analysis, and the pairwise comparison. Section~\ref{sec:conclusion} concludes.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Preliminaries}\label{sec:pre}
+%Section 2
+This section fixes notation and reviews prediction-error expansion, which the proposed method builds upon.
+
+\subsection{Notation and Basic Definitions}\label{sec:notation}
+Let $X$ be an $8$-bit grayscale cover image of size $M\times N$ with pixel values in $\{0,\ldots,255\}$, and let $x_{i,j}$ denote the pixel at $(i,j)$. After embedding, the stego image is $X'$ with pixels $x'_{i,j}$. The payload is a binary sequence $\mathbf{m}=(m_1,\ldots,m_\ell)$ of length $\ell$.
+
+\textbf{Auxiliary information.} The side information $S$ is the metadata that the decoder needs for exact inversion. We distinguish two regimes. In \emph{map-based} schemes, $S$ contains a per-pixel embedding-position map $\mathrm{embpos}\in\{0,1\}^{M\times N}$ and, for adaptive predictors, a block-wise predictor-index map; these scale with the image and payload. In the \emph{side-information-free} regime adopted here, $S$ contains only a few global scalars per layer, as detailed in Section~\ref{sec:sideinfo}.
+
+\textbf{Embedding rate.} The gross rate is $R_{\mathrm{gross}}=\ell/(MN)$ (bpp). The net rate subtracts the side information,
+\begin{equation}
+R_{\mathrm{net}}=\frac{\ell-|S|}{MN}\;\text{(bpp)},\label{eq:rnet}
+\end{equation}
+where $|S|$ is the number of bits needed to represent $S$. We regard $R_{\mathrm{net}}$ as the only fair basis of comparison, because a self-contained RDH system must transmit or self-embed $S$.
+
+\subsection{Prediction-Error Expansion}\label{sec:pee}
+Given a causal or non-causal predictor that yields $\hat{x}_{i,j}$ from neighbors known to both encoder and decoder, the prediction error is $e_{i,j}=x_{i,j}-\hat{x}_{i,j}$. For natural images the histogram of $e_{i,j}$ is sharply peaked at $0$. Standard threshold-controlled PEE with threshold $T$ embeds a bit $b$ into small errors and shifts large errors to keep the mapping invertible:
+\begin{equation}
+e'_{i,j}=\begin{cases}
+2e_{i,j}+b, & |e_{i,j}|\le T,\\
+e_{i,j}+(T+1), & e_{i,j}>T,\\
+e_{i,j}-(T+1), & e_{i,j}<-T,
+\end{cases}\qquad x'_{i,j}=\hat{x}_{i,j}+e'_{i,j}.\label{eq:shiftpee}
+\end{equation}
+The decoder recovers $e'_{i,j}=x'_{i,j}-\hat{x}_{i,j}$ and inverts~\eqref{eq:shiftpee}: if $-2T\le e'_{i,j}\le 2T+1$ then $e_{i,j}=\lfloor e'_{i,j}/2\rfloor$ and $b=e'_{i,j}-2e_{i,j}$; if $e'_{i,j}>2T+1$ then $e_{i,j}=e'_{i,j}-(T+1)$; if $e'_{i,j}<-2T$ then $e_{i,j}=e'_{i,j}+(T+1)$. The larger $T$ is, the more pixels expand (higher capacity) and the larger the distortion, giving a single monotone capacity--quality knob.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Proposed Side-Information-Free Scheme}\label{sec:proposed}
+%Section 3
+The design goal is to keep $|S|$ constant (a few tens of bits) and independent of the payload, while remaining strictly reversible. We achieve this by making both the \emph{prediction context} and the \emph{processing order} functions of information the decoder already possesses. Figure~\ref{fig:method} gives an overview of the scheme.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig_method.png}
+\caption{Overview of the proposed side-information-free scheme. (\textbf{a}) The image is split into interleaved cross ($\mathcal{C}$) and dot ($\mathcal{D}$) parities; a target pixel is predicted by the median of its four orthogonal opposite-parity neighbors. (\textbf{b}) Embedding processes the two layers in sequence, and extraction inverts them in reverse order. Because the processing order and the predictions depend only on the unmodified opposite parity, no position map and no predictor-index map need be transmitted.}
+\label{fig:method}
+\end{figure}
+
+\subsection{Checkerboard Double-Layer Structure}\label{sec:checkerboard}
+We partition the image into two interleaved parities,
+\begin{equation}
+\mathcal{C}=\{(i,j): (i+j)\bmod 2=0\}\ (\text{cross}),\qquad \mathcal{D}=\{(i,j): (i+j)\bmod 2=1\}\ (\text{dot}).
+\end{equation}
+Embedding proceeds in two layers. \emph{Layer 1} embeds into $\mathcal{C}$ using $\mathcal{D}$ (unmodified) as context; \emph{Layer 2} embeds into $\mathcal{D}$ using the already-formed stego $\mathcal{C}$ as context. Because within each layer the predicting parity is fixed, every quantity the encoder uses to predict and to order the embedded parity is available identically to the decoder. Extraction runs in reverse order: it first inverts Layer 2 (dot, using stego cross), which restores the dot parity, and then inverts Layer 1 (cross, using the restored dot). The payload is split across the two layers.
+
+\subsection{Median-of-Four Prediction}\label{sec:median}
+For a pixel $(i,j)$ of the embedded parity, let its four orthogonal neighbors $x_{i-1,j},x_{i+1,j},x_{i,j-1},x_{i,j+1}$ (all of the opposite parity) be the available context; near borders only the existing neighbors are used. The prediction is the rounded median
+\begin{equation}
+\hat{x}_{i,j}=\Big\lfloor \operatorname{median}\big(\{x_{i',j'} : (i',j')\in\mathcal{N}_\perp(i,j)\}\big)+\tfrac{1}{2}\Big\rfloor,
+\end{equation}
+where $\mathcal{N}_\perp$ is the set of real orthogonal opposite-parity neighbors. The median is somewhat more robust to a single outlying neighbor (e.g., across an edge) than the arithmetic mean used by the rhombus predictor. In practice, however, the two differ only marginally: as Section~\ref{sec:predcompare} shows, predictor choice changes PSNR by less than $0.3$~dB once reversibility is enforced, so we adopt the median mainly as a simple default rather than as a source of gain.
+
+\subsection{Context-Complexity Sorting}\label{sec:sorting}
+Smooth regions produce small errors and should be embedded first. We measure the local complexity of $(i,j)$ by the variance of the opposite-parity pixels within a $(2r{+}1)\times(2r{+}1)$ window ($r=2$ throughout),
+\begin{equation}
+c_{i,j}=\operatorname{Var}\{x_{u,v} : |u-i|\le r,\ |v-j|\le r,\ (u,v)\ \text{opposite parity}\},
+\end{equation}
+and embed pixels in ascending order of $c_{i,j}$ (ties broken by raster position). The key property is that $c_{i,j}$ depends only on the opposite parity, which is unchanged during the layer; hence the decoder computes the identical ranking from the stego image and needs \emph{no} stored order.
+
+\subsection{Embedding}\label{sec:embed}
+Within a layer, let $\pi$ be the complexity-sorted order of the embedded parity. The encoder walks $\pi$ and applies shifting PEE~\eqref{eq:shiftpee} to each pixel until the layer's share of the payload is exhausted, recording the number $N$ of pixels visited. Pixels beyond position $N$ are left untouched. If an expansion or shift would push a value outside $[0,255]$, the pixel is added to a small overflow list $O$ and skipped. Thus a layer is described by $(T,N,O,\text{parity},r)$.
+
+\subsection{Side Information}\label{sec:sideinfo}
+The complete side information is, per layer, the threshold $T$ (a few bits), the count $N\le MN/2$ (at most $\lceil\log_2(MN/2)\rceil=17$ bits), the window radius $r$, the parity flag, and the overflow list $O$. In all our experiments $O$ is \emph{empty} at the reported operating points, so $|S|\approx 80$ bits for the two layers combined---constant in the payload \emph{within this regime}. We note that at sufficiently high payloads the overflow list $O$ becomes non-empty and $|S|$ grows accordingly, so the constant-side-information property holds for the low-to-moderate payloads reported here rather than universally; characterizing that transition is left to future work. Crucially, there is \emph{no} embedding-position map and \emph{no} predictor-index map: the used positions are exactly the first $N$ entries of the decoder-reproducible order $\pi$, minus $O$.
+
+\subsection{Extraction and Reversibility}\label{sec:extract}
+Given $X'$ and $S$, the decoder inverts Layer 2 then Layer 1. For the active layer it (i) computes the opposite-parity complexity and the median predictions---both from unmodified context---to reconstruct the identical order $\pi$; (ii) for the first $N$ positions not in $O$, forms $e'_{i,j}=x'_{i,j}-\hat{x}_{i,j}$, extracts the bit and the original error by inverting~\eqref{eq:shiftpee}, and restores $x_{i,j}=\hat{x}_{i,j}+e_{i,j}$; and (iii) leaves all other pixels unchanged. After Layer 2 the dot parity equals the cover; the cross parity is then restored identically using the recovered dot as context. Reversibility is exact because (a) the order and predictions are functions of unmodified context, (b) shifting PEE~\eqref{eq:shiftpee} is invertible, and (c) positions and overflow are fully specified by $(N,O)$. Consequently BER $=0$ and MSE $=0$, as confirmed in all experiments.
+
+\subsection{Why No Position Map Is Needed: Net-Rate Analysis}\label{sec:netbpp}
+Consider a map-based scheme that must convey which pixels were used. Marking $n$ of $MN$ positions has entropy at least $MN\,H_b(n/MN)$ bits. For $M=N=512$ and $n=10{,}000$, this equals $61{,}271$ bits for a uniformly random map. A real map of used positions is spatially clustered, so a good compressor drives it below this value; nevertheless, as Table~\ref{tab:netbpp} shows, the compressed map still costs tens of thousands of bits---far above the payload---so the net rate~\eqref{eq:rnet} remains strongly negative, \emph{unless the positions are predictable from the image}, in which case they need not be stored at all. Note that a well-designed map-based scheme could itself derive such predictable positions rather than store them; the comparison below therefore targets designs that \emph{choose} to store an explicit map. Our scheme realizes the predictable-position principle directly: the used positions are the smallest-complexity entries of a deterministic order, so $|S|$ is constant. Section~\ref{sec:netexp} quantifies the compressed map cost with real compressors and contrasts the two regimes.
+
+\subsection{Multi-Predictor Selection as an Ablation}\label{sec:multipred}
+For completeness we retain the cost-based block-wise multi-predictor idea $J_k(B_\ell)=\lambda_1 D_k(B_\ell)-\lambda_2 C_k(B_\ell)$ as a baseline to be tested rather than assumed. Section~\ref{sec:ablation} shows that, even under an oracle that pays nothing for signaling, choosing the best of several predictors per block improves PSNR by $\approx0$~dB, and that the mandatory $2$~bits/block index makes the net effect negative. This is why the proposed scheme uses a single, fixed median predictor.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiments}\label{sec:experiments}
+%Section 4
+\subsection{Experimental Setup}
+All experiments use standard $8$-bit grayscale $512\times512$ images: \emph{Lena}, \emph{Boat}, \emph{Airplane}, \emph{Barbara}, and \emph{Baboon}~\cite{USCSIPI}. The pipeline is implemented in Python 3.13 with NumPy. For each image and payload we report the best strictly reversible operating point over the single-layer and double-layer variants and over thresholds $T\in\{0,\ldots,11\}$, where ``best'' maximizes stego PSNR subject to BER $=0$ and MSE $=0$. Payloads are quoted in bits; the corresponding gross rate is $\ell/262144$~bpp (e.g., $10{,}000$~bits $\approx0.038$~bpp).
+
+\subsection{Capacity--PSNR Curves}\label{sec:curves}
+Table~\ref{tab:curves} reports the capacity--PSNR curves of the proposed side-information-free scheme with the median predictor. All entries are strictly reversible with an empty overflow list. Low payloads are typically best served by the single layer (higher fidelity), while high payloads favor the double layer (more capacity); the reported value is the better of the two. Figure~\ref{fig:curves} plots these curves, making clear the monotone capacity--quality trade-off and the consistent ordering of images by texture: the smooth Airplane sits highest, while the highly textured Baboon sits lowest at every payload.
+
+\begin{table}[t]
+\centering
+\caption{Capacity--PSNR of the proposed side-information-free scheme (median predictor, best of single/double layer and $T$; all BER $=0$, MSE $=0$). Values are stego PSNR in dB; payloads in bits.}
+\label{tab:curves}
+\begin{tabular}{l c c c c c c}
+\hline
+Image & 5{,}000 & 10{,}000 & 20{,}000 & 30{,}000 & 40{,}000 & 50{,}000 \\
+\hline
+Lena     & 60.39 & 56.80 & 53.31 & 51.28 & 49.77 & 48.55 \\
+Boat     & 60.07 & 56.89 & 53.68 & 51.69 & 50.16 & 48.77 \\
+Airplane & 65.56 & 61.87 & 57.97 & 55.66 & 53.93 & 52.52 \\
+Barbara  & 62.86 & 58.93 & 54.80 & 51.88 & 49.67 & 47.93 \\
+Baboon   & 54.61 & 50.99 & 46.86 & 44.24 & 42.22 & 40.58 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{fig1_capacity_psnr.png}
+\caption{Capacity--PSNR curves of the proposed side-information-free scheme on five standard $512\times512$ images (median predictor, best of single/double layer and threshold; all strictly reversible).}
+\label{fig:curves}
+\end{figure}
+
+
+\subsection{Fidelity and Runtime}\label{sec:ssim}
+Table~\ref{tab:ssim} reports the structural similarity index (SSIM) and the prototype encode/decode time at the $10{,}000$-bit operating point. SSIM exceeds $0.996$ for every image, consistent with the high PSNR and with the fact that each embedded pixel is altered by only a small expansion. The runtimes are for an unoptimized single-thread Python/NumPy implementation and are dominated by the per-pixel sorted walk; the double-layer Baboon case is roughly twice as slow because both parities are processed. These numbers are indicative rather than optimized, but they confirm that extraction is symmetric in cost to embedding, as expected from the shared ordering computation.
+
+\begin{table}[t]
+\centering
+\caption{Fidelity (SSIM) and prototype runtime at a $10{,}000$-bit payload (best reversible operating point; single-thread Python/NumPy). All cases are strictly reversible (BER $=0$, MSE $=0$).}
+\label{tab:ssim}
+\begin{tabular}{l c c c c c}
+\hline
+Image & Layer & PSNR (dB) & SSIM & Encode (ms) & Decode (ms) \\
+\hline
+Lena     & single & 56.80 & 0.9982 & 171 & 173 \\
+Boat     & single & 56.89 & 0.9981 & 180 & 177 \\
+Airplane & single & 61.87 & 0.9994 & 177 & 189 \\
+Barbara  & single & 58.93 & 0.9989 & 175 & 172 \\
+Baboon   & double & 50.99 & 0.9965 & 376 & 361 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Net Embedding Rate: Map-Based vs. Map-Free}\label{sec:netexp}
+Table~\ref{tab:netbpp} makes the central point concrete. For a payload of $10{,}000$ bits we generate a realistic, spatially clustered embedding-position map (the smoothest used positions) and compress it with bzip2/zlib at maximum level; the ``best-compressed'' column is the smaller of the two plus the $8{,}192$-bit predictor-index map. Even so, the net rate of the map-based regime is strongly negative for every image, whereas the proposed scheme spends only $\approx80$ bits of side information. Figure~\ref{fig:netbpp} visualizes this contrast: the map-based bars fall far below zero for all five images, while the side-information-free scheme remains positive. We stress that this quantifies the cost \emph{specifically for designs that store the map explicitly}, as in the scheme this work revises; it is not a claim of superiority over map-free methods. Indeed, a well-designed scheme could derive these positions instead of storing them---which is exactly the principle the proposed method adopts. The proposed ``net'' column ($10{,}000-80=9{,}920$ bits) is by construction the payload minus the $\approx80$-bit side information, and is therefore image-independent. Several strong PEE/PVO methods already avoid such a map through decoder-recoverable sorting; against those, the proposed scheme offers conceptual simplicity rather than a net-rate advantage, as discussed in Section~\ref{sec:sota}.
+
+\begin{table}[t]
+\centering
+\caption{Side information and net capacity at a payload of $10{,}000$ bits ($512\times512$). The map-based regime must convey the embedding-position map plus a $2$~bits/block predictor index; the binary-entropy value for a uniformly random map is $61{,}271$ bits, and a clustered map compresses below this but still far exceeds the payload. The proposed net capacity ($10{,}000-80=9{,}920$ bits) is the payload minus side information by construction and is thus identical across images.}
+\label{tab:netbpp}
+\begin{tabular}{l c c c}
+\hline
+Image & Map-based side info (best-compressed, bits) & Net (map-based, bits) & Net (proposed, bits) \\
+\hline
+Lena     & 64{,}952 & $-54{,}952$ & $+9{,}920$ \\
+Boat     & 64{,}560 & $-54{,}560$ & $+9{,}920$ \\
+Airplane & 42{,}320 & $-32{,}320$ & $+9{,}920$ \\
+Barbara  & 42{,}776 & $-32{,}776$ & $+9{,}920$ \\
+Baboon   & 54{,}912 & $-44{,}912$ & $+9{,}920$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{fig2_netbpp.png}
+\caption{Net embedding capacity at a $10{,}000$-bit payload. The map-based regime, which must convey the embedding-position map, yields a strongly negative net capacity, whereas the proposed side-information-free scheme retains a positive net capacity.}
+\label{fig:netbpp}
+\end{figure}
+
+
+\subsection{Predictor Comparison}\label{sec:predcompare}
+Table~\ref{tab:pred} compares the median-of-four predictor with the mean rhombus predictor and an inverse-gradient-weighted predictor, all decoder-recoverable, at $10{,}000$ bits (best reversible operating point). Differences are small ($<0.3$~dB): the median is best on smooth images, while the inverse-gradient and mean variants are marginally better on the highly textured Baboon. We adopt the median as the overall default. We note that an earlier, non-recoverable edge-padded variant appeared to give the median a much larger advantage; that gain was an artifact of using padded (non-invertible) borders and disappears under a strictly recoverable implementation. Figure~\ref{fig:pred} shows these near-identical results across all five images, confirming that predictor choice is not a meaningful lever once reversibility is enforced.
+
+\begin{table}[t]
+\centering
+\caption{Predictor comparison at $10{,}000$ bits (stego PSNR in dB, best reversible operating point).}
+\label{tab:pred}
+\begin{tabular}{l c c c}
+\hline
+Image & Median-of-4 & Inverse-gradient & Mean rhombus \\
+\hline
+Lena     & \textbf{56.80} & 56.77 & 56.78 \\
+Boat     & \textbf{56.89} & 56.81 & 56.84 \\
+Airplane & \textbf{61.87} & 61.79 & 61.80 \\
+Barbara  & 58.93 & 58.88 & \textbf{58.96} \\
+Baboon   & 50.99 & 51.07 & \textbf{51.32} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{fig3_predictors.png}
+\caption{Predictor comparison at a $10{,}000$-bit payload. All decoder-recoverable predictors differ by less than $0.3$~dB; the median-of-four predictor is adopted as the default.}
+\label{fig:pred}
+\end{figure}
+
+
+\subsection{Ablation: Does Block-Wise Multi-Predictor Selection Help?}\label{sec:ablation}
+We evaluate the cost-based selection among per-block predictors under an \emph{oracle} that charges nothing for the predictor-index signaling. The oracle PSNR gain over a single fixed predictor is negligible: $+0.04$~dB on Lena, $+0.13$~dB on Barbara, and $+0.14$~dB on Baboon. Once the mandatory $2$~bits/block ($8{,}192$~bits for $8\times8$ blocks) is charged against the payload, the selection turns into a net loss of $0.5$--$2.0$~dB across images. In other words, block-wise multi-predictor selection does not pay for itself; the design budget is better spent on eliminating side information, as the proposed scheme does.
+
+\subsection{Sorting Quality as a Limiting Factor}\label{sec:sortlimit}
+A major contributor to the residual distance from the best reported numbers is how well the embedding order concentrates zero errors early. An oracle that sorts by the \emph{true} $|e|$ would reach $\approx65$~dB at $10{,}000$ bits on the smooth images; however, such an oracle order is unavailable to the decoder because the order may use only recoverable context. We tested many decoder-recoverable complexity metrics (variance at $r\in\{1,2,3\}$, neighborhood range, sum of absolute differences, directional gradients, and combinations): all cap the zero-error concentration in the first $10{,}000$ sorted pixels of Lena at about $25\%$. A linear model \emph{learned} over all decoder-recoverable features yields no improvement (Lena $25\%\!\to\!25\%$, Airplane $52\%\!\to\!52\%$, Barbara $34\%\!\to\!30\%$). These results indicate that recoverable sorting quality is an important limiting factor for the present design, rather than a simple parameter-tuning issue. They do not prove that sorting alone explains the entire gap to SOTA, since stronger methods also differ in predictor design, histogram modification, pairing/PVO structure, and layer allocation.
+
+\subsection{Faithful Pairwise-PEE Comparison}\label{sec:pairwise}
+Because pairwise PEE is often cited as a way to gain at low capacity, we implemented a faithful high-fidelity pairwise mapping (central $(0,0)$ pair coded in three states for $1.5$~bits on average, axis pairs carrying one bit with a unit shift, and both-nonzero pairs shifted only, so every pixel moves by at most one gray level) on the same checkerboard double layer and verified exact reversibility. Table~\ref{tab:pairwise} shows that, although reversible (BER $=0$, empty overflow), the basic pairwise mapping is $1$--$3$~dB \emph{below} threshold-optimized one-dimensional PEE at the tested operating points, and its unit-shift, high-fidelity constraint limits capacity so that $40{,}000$ bits is unreachable except on Airplane. The central-bin advantage of pairwise ($\approx+0.5$~dB) does not overcome the flexibility of choosing $T$ in the 1D scheme. Figure~\ref{fig:pairwise} illustrates this gap at the $10{,}000$-bit payload, where the proposed 1D scheme dominates on every image.
+
+\begin{table}[t]
+\centering
+\caption{Faithful high-fidelity pairwise PEE vs. the proposed 1D shifting PEE (stego PSNR in dB; both strictly reversible). ``--'' denotes payload not reachable under the unit-shift pairwise constraint.}
+\label{tab:pairwise}
+\begin{tabular}{l c c c c}
+\hline
+ & \multicolumn{2}{c}{$10{,}000$ bits} & \multicolumn{2}{c}{$20{,}000$ bits} \\
+Image & Pairwise & Proposed 1D & Pairwise & Proposed 1D \\
+\hline
+Lena     & 55.58 & \textbf{56.80} & 51.97 & \textbf{53.31} \\
+Boat     & 55.32 & \textbf{56.89} & 51.58 & \textbf{53.68} \\
+Airplane & 58.97 & \textbf{61.87} & 54.90 & \textbf{57.97} \\
+Barbara  & 55.96 & \textbf{58.93} & 50.92 & \textbf{54.80} \\
+Baboon   & 49.10 & \textbf{50.99} & --    & \textbf{46.86} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{fig4_pairwise.png}
+\caption{Faithful high-fidelity pairwise PEE versus the proposed one-dimensional shifting PEE at a $10{,}000$-bit payload. Although reversible, pairwise PEE underperforms the threshold-optimized 1D scheme.}
+\label{fig:pairwise}
+\end{figure}
+
+
+\subsection{Comparison with Reported Methods}\label{sec:sota}
+Table~\ref{tab:sota} places the proposed method against representative PEE/PVO methods on Lena at $10{,}000$ bits, as compiled by Li et al.~\cite{Li2025}. In absolute PSNR the proposed scheme trails these methods by $1.6$--$4.4$~dB on Lena. We stress that this is a genuine limitation rather than a hidden strength: the representative PEE/PVO baselines are themselves largely side-information-free, relying on decoder-recoverable sorting and, at most, a small compressed location map for overflow rather than a per-pixel embedding-position map. Consequently, the net-rate argument of Section~\ref{sec:netbpp} does \emph{not} confer an advantage over these baselines; it applies specifically to designs that store an explicit per-pixel position map, such as the scheme this work revises. Against the strongest map-free baselines the proposed method matches the paradigm while being conceptually simpler, but it does not surpass them in fidelity. Because the baseline figures are reported on Lena, the higher PSNR of the proposed scheme on Airplane ($61.87$~dB) and Barbara ($58.93$~dB) reflects the smoother error histograms of those images and must not be read as superiority over the Lena baselines. Figure~\ref{fig:sota} visualizes the Lena comparison.
+
+\begin{table}[t]
+\centering
+\caption{Reported PSNR on Lena at $10{,}000$ bits for representative methods (as summarized in~\cite{Li2025}) versus the proposed scheme, with the side-information type stated explicitly. The baseline side-information entries are qualitative because the cited summary reports PSNR values, not complete net-rate ledgers.}
+\label{tab:sota}
+\small
+\begin{tabular}{p{3.0cm} p{2.0cm} c p{6.4cm}}
+\hline
+Method & Category & PSNR on Lena (dB) & Side-information type \\
+\hline
+Sachnev et al.~\cite{Sachnev2009} & PEE-based & 58.45 & Decoder-recoverable sorting; no full position map \\
+Ou et al.~\cite{Ou2013} & PEE-based & 59.75 & Threshold/location overhead; no reported full position map \\
+Kim et al.~\cite{Kim2019} & PVO/PEE & 60.12 & PVO grouping parameters; no reported full position map \\
+Ou et al.~\cite{Ou2019} & Pairwise PEE & 60.71 & Pairing/threshold parameters; no reported full position map \\
+Zhang et al.~\cite{Zhang2022} & PEE-based & 60.94 & Adaptive parameters; no reported full position map \\
+Li et al.~\cite{Li2011} & PVO-based & 60.97 & PVO ordering/parameters; no reported full position map \\
+Li et al.~\cite{Li2015} & Hybrid & 61.20 & Hybrid parameters; no reported full position map \\
+\hline
+\textbf{Proposed} & PEE-based & \textbf{56.80} & Scalar parameters only ($\approx80$ bits) \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{fig5_sota.png}
+\caption{Reported PSNR on Lena at a $10{,}000$-bit payload for representative methods (as summarized in~\cite{Li2025}) versus the proposed side-information-free scheme, which uses only $\approx80$ bits of side information.}
+\label{fig:sota}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}\label{sec:conclusion}
+%Section 5
+This paper reframes high-capacity reversible data hiding around the \emph{net} embedding rate. We showed, by the binary-entropy bound and by real compressors, that a self-embedded embedding-position map drives the net rate negative at low-to-moderate payloads, and we used this as the design criterion. The proposed side-information-free scheme---a checkerboard double layer with median-of-four prediction, opposite-parity complexity sorting, and threshold-controlled shifting PEE---derives its used positions at the decoder instead of storing them, so its total side information is a few tens of bits while recovery is strictly lossless (BER $=0$, MSE $=0$) on all five standard images. It holds a net-rate advantage over designs that store an explicit per-pixel position map, but it does not surpass the strongest map-free PEE/PVO baselines in absolute fidelity; accordingly, we position the contribution as a net-rate analysis together with a set of corrective findings, rather than as a new fidelity record.
+
+We also reported three findings that revise common assumptions: block-wise multi-predictor selection has near-zero oracle gain and a net loss once signaled; decoder-recoverable sorting quality is a major limiting factor for the present design, although stronger baselines also differ in predictor design, histogram modification, pairing/PVO structure, and layer allocation; and a faithful high-fidelity pairwise-PEE implementation, though reversible, underperforms threshold-optimized 1D PEE at the tested operating points. Future work includes richer yet fully recoverable predictors, capacity-adaptive layer allocation, broader dataset evaluation, and extending the side-information-free principle to color images and the encrypted domain. Overall, the contribution of this work is to demonstrate that explicit auxiliary-information accounting---rather than headline payload alone---is essential for fair progress in reversible image data hiding.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Patents}
+%
+%This section is not mandatory, but may be added if there are patents resulting from the work reported in this manuscript.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{6pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% optional
+%\supplementary{The following supporting information can be downloaded at:  \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title.}
+
+% Only for journal Methods and Protocols:
+% If you wish to submit a video article, please do so with any other supplementary material.
+% \supplementary{The following supporting information can be downloaded at: \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title. A supporting video article is available at doi: link.}
+
+% Only used for preprtints:
+% \supplementary{The following supporting information can be downloaded at the website of this paper posted on \href{https://www.preprints.org/}{Preprints.org}.}
+
+% Only for journal Hardware:
+% If you wish to submit a video article, please do so with any other supplementary material.
+% \supplementary{The following supporting information can be downloaded at: \linksupplementary{s1}, Figure S1: title; Table S1: title; Video S1: title.\vspace{6pt}\\
+%\begin{tabularx}{\textwidth}{lll}
+%\toprule
+%\textbf{Name} & \textbf{Type} & \textbf{Description} \\
+%\midrule
+%S1 & Python script (.py) & Script of python source code used in XX \\
+%S2 & Text (.txt) & Script of modelling code used to make Figure X \\
+%S3 & Text (.txt) & Raw data from experiment X \\
+%S4 & Video (.mp4) & Video demonstrating the hardware in use \\
+%... & ... & ... \\
+%\bottomrule
+%\end{tabularx}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{Conceptualization, C.K., C.-N.Y. and L.L.; methodology, C.K. and C.-N.Y.; software, C.K.; validation, C.K., C.-N.Y. and L.L.; formal analysis, C.K. and C.-N.Y.; investigation, C.K.; resources, C.-N.Y. and L.L.; data curation, C.K.; writing—original draft preparation, C.K.; writing—review and editing, C.-N.Y. and L.L.; visualization, C.K.; supervision, C.-N.Y. and L.L.; project administration, C.-N.Y. and L.L.; funding acquisition, C.-N.Y. and L.L. All authors have read and agreed to the published version of the manuscript.}
+
+\funding{This research was supported in part by the National Science and Technology Council (NSTC) under Grant No. 112-2221-E-259-007-MY2 (C.-N.Y.), the National Natural Science Foundation of China under Grant No. 62466038 (L.L.), and the Open Foundation of Jiangxi Provincial Key Laboratory of Image Processing and Pattern Recognition under Grant No. ET202404437 (L.L.).}
+
+\institutionalreview{Not applicable..}
+
+\informedconsent{Not applicable.}
+
+\dataavailability{No new data were created in this study. The test images used in the experiments are publicly available from the USC-SIPI Image Database (http://sipi.usc.edu/database/).} 
+
+%\durcstatement{Current research is limited to the [please insert a specific academic field, e.g., XXX], which is beneficial [share benefits and/or primary use] and does not pose a threat to public health or national security. Authors acknowledge the dual-use potential of the research involving xxx and confirm that all necessary precautions have been taken to prevent potential misuse. As an ethical responsibility, authors strictly adhere to relevant national and international laws about DURC. Authors advocate for responsible deployment, ethical considerations, regulatory compliance, and transparent reporting to mitigate misuse risks and foster beneficial outcomes.}
+
+% Only for journal Nursing Reports
+%\publicinvolvement{Please describe how the public (patients, consumers, carers) were involved in the research. Consider reporting against the GRIPP2 (Guidance for Reporting Involvement of Patients and the Public) checklist. If the public were not involved in any aspect of the research add: ``No public involvement in any aspect of this research''.}
+%
+%% Only for journal Nursing Reports
+%\guidelinesstandards{Please add a statement indicating which reporting guideline was used when drafting the report. For example, ``This manuscript was drafted against the XXX (the full name of reporting guidelines and citation) for XXX (type of research) research''. A complete list of reporting guidelines can be accessed via the equator network: \url{https://www.equator-network.org/}.}
+%
+%% Only for journal Nursing Reports
+%\useofartificialintelligence{Please describe in detail any and all uses of artificial intelligence (AI) or AI-assisted tools used in the preparation of the manuscript. This may include, but is not limited to, language translation, language editing and grammar, or generating text. Alternatively, please state that “AI or AI-assisted tools were not used in drafting any aspect of this manuscript”.}
+
+\acknowledgments{The authors would like to thank their institutions for their support.}
+
+\conflictsofinterest{The authors declare no conflicts of interest. The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript; or in the decision to publish the results.} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+
+%% Only for journal Encyclopedia
+%\entrylink{The Link to this entry published on the encyclopedia platform.}
+
+\abbreviations{Abbreviations}{
+The following abbreviations are used in this manuscript:
+\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+RDH    & Reversible Data Hiding\\
+PEE    & Prediction-Error Expansion\\
+DE     & Difference Expansion\\
+PVO    & Pixel-Value Ordering\\
+HS     & Histogram Shifting\\
+PSNR   & Peak Signal-to-Noise Ratio\\
+SSIM   & Structural Similarity Index Measure\\
+BER    & Bit Error Rate\\
+MSE    & Mean Squared Error\\
+bpp    & Bits Per Pixel\\
+$X$    & Original cover image\\
+$X'$   & Stego (watermarked) image\\
+$m$    & Embedded message (payload)\\
+$S$    & Auxiliary (side) information\\
+$M,N$  & Image height and width (pixels)\\
+$\mathcal{C},\mathcal{D}$ & Cross and dot (checkerboard) parities\\
+$\hat{x}_{i,j}$ & Median-of-four prediction at $(i,j)$\\
+$e_{i,j},e'_{i,j}$ & Prediction error and its expanded value\\
+$c_{i,j}$ & Opposite-parity context complexity\\
+$r$    & Complexity window radius\\
+$T$    & Prediction-error threshold\\
+$N$    & Number of embedded pixels per layer\\
+$O$    & Overflow (skipped) pixel list\\
+$R_{\mathrm{gross}},R_{\mathrm{net}}$ & Gross and net embedding rate
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional
+%\appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+%\appendixstart
+%\appendix
+%\section[\appendixname~\thesection]{}
+%\subsection[\appendixname~\thesubsection]{}
+%The appendix is an optional section that can contain details and data supplemental to the main text---for example, explanations of experimental details that would disrupt the flow of the main text but nonetheless remain crucial to understanding and reproducing the research shown; figures of replicates for experiments of which representative data are shown in the main text can be added here if brief, or as Supplementary Data. Mathematical proofs of results not central to the paper can be added as an appendix.
+%
+%\begin{table}[H] 
+%\caption{This is a table caption.\label{tab5}}
+%%\newcolumntype{C}{>{\centering\arraybackslash}X}
+%\begin{tabularx}{\textwidth}{CCC}
+%\toprule
+%\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
+%\midrule
+%Entry 1		& Data			& Data\\
+%Entry 2		& Data			& Data\\
+%\bottomrule
+%\end{tabularx}
+%\end{table}
+%
+%\section[\appendixname~\thesection]{}
+%All appendix sections must be cited in the main text. In the appendices, Figures, Tables, etc. should be labeled, starting with ``A''---e.g., Figure A1, Figure A2, etc.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\isPreprints{}{% This command is only used for ``preprints''.
+\begin{adjustwidth}{-\extralength}{0cm}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+%\printendnotes[custom] % Un-comment to print a list of endnotes
+
+\reftitle{References}
+
+% Please provide the correct journal abbreviation (e.g. according to the “List of Title Word Abbreviations” http://www.issn.org/services/online-services/access-to-the-ltwa/).
+% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here. 
+
+%=====================================
+% References, variant A: external bibliography
+%=====================================
+% \bibliography{your_external_BibTeX_file}
+
+%=====================================
+% References, variant B: internal bibliography
+%=====================================
+
+\begin{thebibliography}{99}
+
+\bibitem{Ni2006}
+Ni, Z.; Shi, Y.-Q.; Ansari, N.; Su, W.
+Reversible data hiding.
+\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2006}, \emph{16}, 354--362.
+
+\bibitem{Li2015}
+Li, X.; Zhang, W.; Gui, X.; Yang, B.
+Efficient reversible data hiding based on multiple histograms modification.
+\emph{IEEE Trans. Inf. Forensics Secur.} \textbf{2015}, \emph{10}, 2016--2027.
+
+\bibitem{ZhangSurvey2024}
+Zhang, C.; Ou, B.; Peng, F.; Zhao, Y.; Li, L.
+A survey on reversible data hiding for uncompressed images.
+\emph{ACM Comput. Surv.} \textbf{2024}, \emph{56}(7), 1--33. \url{https://doi.org/10.1145/3645105}.
+
+\bibitem{Thodi2007}
+Thodi, D.M.; Rodriguez, J.J.
+Expansion embedding techniques for reversible watermarking.
+\emph{IEEE Trans. Image Process.} \textbf{2007}, \emph{16}, 721--730.
+
+\bibitem{Li2011}
+Li, X.; Yang, B.; Zeng, T.
+Efficient reversible watermarking based on adaptive prediction-error expansion and pixel selection.
+\emph{IEEE Trans. Image Process.} \textbf{2011}, \emph{20}, 3524--3533.
+
+\bibitem{Sachnev2009}
+Sachnev, V.; Kim, H.J.; Nam, J.; Suresh, S.; Shi, Y.-Q.
+Reversible watermarking algorithm using sorting and prediction.
+\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2009}, \emph{19}, 989--999.
+
+\bibitem{Gao2019}
+Gao, E.; Pan, Z.; Gao, X.
+Reversible data hiding based on novel pairwise PVO and annular merging strategy.
+\emph{Inf. Sci.} \textbf{2019}, \emph{505}, 549--561.
+
+\bibitem{Rad2016}
+Rad, R.M.; Wong, K.; Guo, J.M.
+Reversible data hiding by adaptive group modification on histogram of prediction errors.
+\emph{Signal Process.} \textbf{2016}, \emph{125}, 315--328.
+
+\bibitem{Soveiri2025}
+Soveiri, R.G.; Asaar, M.R.; Barjoei, P.D.
+Adaptive reversible data hiding scheme based on novel cascading prediction error histogram shifting using decimal floating stream.
+\emph{Majlesi J. Electr. Eng.} \textbf{2025}, \emph{19}, 1--13.
+
+\bibitem{Fallahpour2007}
+Fallahpour, M.; Sedaaghi, M.H.
+High capacity lossless data hiding based on histogram modification.
+\emph{IEICE Electron. Express} \textbf{2007}, \emph{4}, 205--210.
+
+\bibitem{Fu2014}
+Fu, D.S.; Jing, Z.J.; Zhao, S.G.; Fan, J.
+Reversible data hiding based on prediction-error histogram shifting and EMD mechanism.
+\emph{AEU Int. J. Electron. Commun.} \textbf{2014}, \emph{68}, 933--943.
+
+\bibitem{Chang2022}
+Chang, Q.; Li, X.; Zhao, Y.
+Reversible data hiding for color images based on adaptive three-dimensional histogram modification.
+\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2022}, \emph{32}, 5725--5735.
+
+\bibitem{Ou2013}
+Ou, B.; Li, X.; Zhao, Y.; Ni, R.; Shi, Y.-Q.
+Pairwise prediction-error expansion for efficient reversible data hiding.
+\emph{IEEE Trans. Image Process.} \textbf{2013}, \emph{22}, 5010--5021.
+
+\bibitem{Kim2019}
+Kim, S.; Qu, X.; Sachnev, V.; Kim, H.J.
+Skewed histogram shifting for reversible data hiding using a pair of extreme predictions.
+\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2019}, \emph{29}, 3236--3246.
+
+\bibitem{Ou2019}
+Ou, B.; Li, X.; Zhang, W.; Zhao, Y.
+Improving pairwise PEE via hybrid-dimensional histogram generation and adaptive mapping selection.
+\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2019}, \emph{29}, 2176--2190.
+
+\bibitem{Zhang2022}
+Zhang, C.; Ou, B.
+Reversible data hiding based on multiple adaptive two-dimensional prediction-error histograms modification.
+\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2022}, \emph{32}, 4174--4187.
+
+\bibitem{USCSIPI}
+USC-SIPI Image Database.
+Available online: \url{http://sipi.usc.edu/database/} (accessed on 10 February 2026).
+
+\bibitem{Li2025}
+Li, Z.; Lu, L.; Fan, G.; Li, P.; Pan, Z.
+Prediction-error expansion based reversible data hiding via diamond search fusion and pairing.
+\emph{Signal Process.} \textbf{2025}, \emph{230}, 109858.
+
+\end{thebibliography}
+%
+%
+%\begin{thebibliography}{999}
+%
+%\bibitem{Barton2000}
+%Barton, J.M.
+%Method and Apparatus for Embedding Authentication Information within Digital Data.
+%U.S. Patent 6,163,842, 2000.
+%
+%\bibitem{Goljan2001}
+%Goljan, M.; Fridrich, J.; Du, R.
+%Distortion-free data embedding for images.
+%In Proceedings of the 4th International Workshop on Information Hiding, Pittsburgh, PA, USA, 25–27 April 2001; pp. 27--41.
+%
+%\bibitem{Celik2005}
+%Celik, M.U.; Sharma, G.; Tekalp, A.M.; Saber, E.
+%Lossless generalized-LSB data embedding.
+%\emph{IEEE Trans. Image Process.} \textbf{2005}, \emph{14}, 253--266.
+%
+%\bibitem{Tian2003}
+%Tian, J.
+%Reversible data embedding using a difference expansion.
+%\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2003}, \emph{13}, 890--896.
+%
+%\bibitem{Thodi2007}
+%Thodi, D.M.; Rodriguez, J.J.
+%Expansion embedding techniques for reversible watermarking.
+%\emph{IEEE Trans. Image Process.} \textbf{2007}, \emph{16}, 721--730.
+%
+%\bibitem{Ni2006}
+%Ni, Z.; Shi, Y.-Q.; Ansari, N.; Su, W.
+%Reversible data hiding.
+%\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2006}, \emph{16}, 354--362.
+%
+%\bibitem{Fallahpour2007}
+%Fallahpour, M.; Sedaaghi, M.H.
+%High capacity lossless data hiding based on histogram modification.
+%\emph{IEICE Electron. Express} \textbf{2007}, \emph{4}, 205--210.
+%
+%\bibitem{Li2011}
+%Li, X.; Yang, B.; Zeng, T.
+%Efficient reversible watermarking based on adaptive prediction-error expansion and pixel selection.
+%\emph{IEEE Trans. Image Process.} \textbf{2011}, \emph{20}, 3524--3533.
+%
+%\bibitem{Sachnev2009}
+%Sachnev, V.; Kim, H.J.; Nam, J.; Suresh, S.; Shi, Y.-Q.
+%Reversible watermarking algorithm using sorting and prediction.
+%\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2009}, \emph{19}, 989--999.
+%
+%\bibitem{Li2015}
+%Li, X.; Zhang, W.; Gui, X.; Yang, B.
+%Efficient reversible data hiding based on multiple histograms modification.
+%\emph{IEEE Trans. Inf. Forensics Secur.} \textbf{2015}, \emph{10}, 2016--2027.
+%
+%\bibitem{Ou2013}
+%Ou, B.; Li, X.; Zhao, Y.; Ni, R.; Shi, Y.-Q.
+%Pairwise prediction-error expansion for efficient reversible data hiding.
+%\emph{IEEE Trans. Image Process.} \textbf{2013}, \emph{22}, 5010--5021.
+%
+%\bibitem{Kim2019}
+%Kim, S.; Qu, X.; Sachnev, V.; Kim, H.J.
+%Skewed histogram shifting for reversible data hiding using a pair of extreme predictions.
+%\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2019}, \emph{29}, 3236--3246.
+%
+%\bibitem{Ou2019}
+%Ou, B.; Li, X.; Zhang, W.; Zhao, Y.
+%Improving pairwise PEE via hybrid-dimensional histogram generation and adaptive mapping selection.
+%\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2019}, \emph{29}, 2176--2190.
+%
+%\bibitem{Zhang2022}
+%Zhang, C.; Ou, B.
+%Reversible data hiding based on multiple adaptive two-dimensional prediction-error histograms modification.
+%\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2022}, \emph{32}, 4174--4187.
+%
+%\bibitem{Ma2013}
+%Ma, K.; Zhang, W.; Zhao, X.; Yu, N.; Li, F.
+%Reversible data hiding in encrypted images by reserving room before encryption.
+%\emph{IEEE Trans. Inf. Forensics Secur.} \textbf{2013}, \emph{8}, 553--562.
+%
+%\bibitem{Bian2024}
+%Bian, Z.; Yao, H.; Le, Y.; Qin, C.
+%Two-dimensional histogram-based reversible contrast enhancement using bi-histogram equalization.
+%\emph{Displays} \textbf{2024}, \emph{81}, 102580.
+%
+%\bibitem{Chang2022}
+%Chang, Q.; Li, X.; Zhao, Y.
+%Reversible data hiding for color images based on adaptive three-dimensional histogram modification.
+%\emph{IEEE Trans. Circuits Syst. Video Technol.} \textbf{2022}, \emph{32}, 5725--5735.
+%
+%\bibitem{Garg2017}
+%Garg, P.; Kasana, S.S.; Kasana, G.
+%Block-based reversible data hiding using histogram shifting and modulus operator for digital images.
+%\emph{J. Circuits Syst. Comput.} \textbf{2017}, \emph{26}, 0233303.
+%
+%\bibitem{Aziz2020}
+%Aziz, F.; Ahmad, T.; Malik, A.H.; Uddin, M.I.; Ahmad, S.; Sharaf, M.
+%Reversible data hiding techniques with high message embedding capacity in images.
+%\emph{PLoS ONE} \textbf{2020}, \emph{15}, 1--24.
+%
+%\bibitem{Gao2019}
+%Gao, E.; Pan, Z.; Gao, X.
+%Reversible data hiding based on novel pairwise PVO and annular merging strategy.
+%\emph{Inf. Sci.} \textbf{2019}, \emph{505}, 549--561.
+%
+%\bibitem{Kumar2025}
+%Kumar, S.; Walia, G.S.; Gupta, A.
+%An efficient technique for reversible data hiding using bidirectional histogram shifting and multistage embedding.
+%\emph{Eng. Appl. Artif. Intell.} \textbf{2025}, \emph{156}, 110986.
+%
+%\bibitem{Fu2014}
+%Fu, D.S.; Jing, Z.J.; Zhao, S.G.; Fan, J.
+%Reversible data hiding based on prediction-error histogram shifting and EMD mechanism.
+%\emph{AEU Int. J. Electron. Commun.} \textbf{2014}, \emph{68}, 933--943.
+%
+%\bibitem{Rad2016}
+%Rad, R.M.; Wong, K.; Guo, J.M.
+%Reversible data hiding by adaptive group modification on histogram of prediction errors.
+%\emph{Signal Process.} \textbf{2016}, \emph{125}, 315--328.
+%
+%\bibitem{Huang2025}
+%Huang, C.T.; Song, J.X.; Dang, T.H.
+%Hybrid prediction error and histogram shifting method for reversible data hiding in video system.
+%\emph{J. Inf. Secur. Appl.} \textbf{2025}, \emph{89}, 104007.
+%
+%\bibitem{Soveiri2025}
+%Soveiri, R.G.; Asaar, M.R.; Barjoei, P.D.
+%Adaptive reversible data hiding scheme based on novel cascading prediction error histogram shifting using decimal floating stream.
+%\emph{Majlesi J. Electr. Eng.} \textbf{2025}, \emph{19}, 1--13.
+%
+%\bibitem{Chi2021}
+%Chi, H.-X.; Horng, J.-H.; Chang, C.-C.
+%Reversible data hiding based on pixel-value-ordering and prediction-error triplet expansion.
+%\emph{Mathematics} \textbf{2021}, \emph{9}, 1703.
+%
+%\bibitem{Li2025}
+%Li, Z.; Lu, L.; Fan, G.; Li, P.; Pan, Z.
+%Prediction-error expansion based reversible data hiding via diamond search fusion and pairing.
+%\emph{Signal Process.} \textbf{2025}, \emph{230}, 109858.
+%
+%\bibitem{ZhangSurvey2024}
+%Zhang, C.; Ou, B.; Peng, F.; Zhao, Y.; Li, L.
+%A survey on reversible data hiding for uncompressed images.
+%\emph{ACM Comput. Surv.} \textbf{2024}, \emph{56}, Article 123.
+%
+%\bibitem{USCSIPI}
+%USC-SIPI Image Database.
+%Available online: \url{http://sipi.usc.edu/database/} (accessed on 10 February 2026).
+%
+%\end{thebibliography}
+
+
+
+% ACS format
+%\begin{thebibliography}{999}
+%% Reference 1
+%\bibitem{ref-journal}
+%Author~1, T. The title of the cited article. {\em Journal Abbreviation} {\bf 2008}, {\em 10}, 142--149.
+%% Reference 2
+%\bibitem{ref-book1}
+%Author~2, L. The title of the cited contribution. In {\em The Book Title}; Editor 1, F., Editor 2, A., Eds.; Publishing House: City, Country, 2007; pp. 32--58.
+%% Reference 3
+%\bibitem{ref-book2}
+%Author 1, A.; Author 2, B. \textit{Book Title}, 3rd ed.; Publisher: Publisher Location, Country, 2008; pp. 154--196.
+%% Reference 4
+%\bibitem{ref-unpublish}
+%Author 1, A.B.; Author 2, C. Title of Unpublished Work. \textit{Abbreviated Journal Name} year, \textit{phrase indicating stage of publication (submitted; accepted; in press)}.
+%% Reference 5
+%\bibitem{ref-url}
+%Title of Site. Available online: URL (accessed on Day Month Year).
+%% Reference 6
+%\bibitem{ref-proceeding}
+%Author 1, A.B.; Author 2, C.D.; Author 3, E.F. Title of presentation. In Proceedings of the Name of the Conference, Location of Conference, Country, Date of Conference (Day Month Year); Abstract Number (optional), Pagination (optional).
+%% Reference 7
+%\bibitem{ref-thesis}
+%Author 1, A.B. Title of Thesis. Level of Thesis, Degree-Granting University, Location of University, Date of Completion.
+%\end{thebibliography}
+
+% If authors have biography, please use the format below
+%\section*{Short Biography of Authors}
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author1.pdf}}}
+%{\textbf{Firstname Lastname} Biography of first author}
+%
+%\bio
+%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author2.jpg}}}
+%{\textbf{Firstname Lastname} Biography of second author}
+
+% For the MDPI journals use author-date citation, please follow the formatting guidelines on http://www.mdpi.com/authors/references
+% To cite two works by the same author: \citeauthor{ref-journal-1a} (\citeyear{ref-journal-1a}, \citeyear{ref-journal-1b}). This produces: Whittaker (1967, 1975)
+% To cite two works by the same author with specific pages: \citeauthor{ref-journal-3a} (\citeyear{ref-journal-3a}, p. 328; \citeyear{ref-journal-3b}, p.475). This produces: Wong (1999, p. 328; 2000, p. 475)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for journal Sci
+%\reviewreports{\\
+%Reviewer 1 comments and authors’ response\\
+%Reviewer 2 comments and authors’ response\\
+%Reviewer 3 comments and authors’ response
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PublishersNote{}
+%\isPreprints{}{% This command is only used for ``preprints''.
+\end{adjustwidth}
+%} % If the paper is ``preprints'', please uncomment this parenthesis.
+\end{document}
+
